@@ -62,12 +62,16 @@ const resetGame = () => {
     // ...
     cells = ['', '', '', '', '', '', '', '', ''];
     currentPlayer = 'X';
-    
+
     // Your code to update the 'result' element
     // ...
+    result.textContent = `Player ${currentPlayer} turn`;
 
     // Your code to re-enable buttons
     // ...
+    btns.forEach(btn => {
+        btn.innerHTML = "";
+    })
 };
 
 btns.forEach((btn, i) => {
