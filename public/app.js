@@ -1,9 +1,12 @@
 // Initial game state
 let cells = ['', '', '', '', '', '', '', '', ''];
-let currentPlayer = 'X';
-let result = document.querySelector('.result');
-let btns = document.querySelectorAll('.btn');
-let conditions = [
+let player = 'X';
+let currentPlayer = x;
+let running = false;
+const result = document.querySelector('.result');
+const btns = document.querySelectorAll('.btn');
+const btnReset = document.querySelector('#reset')
+const conditions = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -14,17 +17,23 @@ let conditions = [
     [2, 4, 6]
 ];
 
+initial();
+
+function inital(){
+    btns.forEach(btn => btn.addEventListener)
+}
+
 result.textContent = `Player ${currentPlayer} turn`;
-var b0,b1,b2,b3,b4,b5,b6,b7,b8;
-b0 = btns[0];
-b1 = btns[1];
-b2 = btns[2];
-b3 = btns[3];
-b4 = btns[4];
-b5 = btns[5];
-b6 = btns[6];
-b7 = btns[7];
-b8 = btns[8];
+// var b0,b1,b2,b3,b4,b5,b6,b7,b8;
+// b0 = btns[0];
+// b1 = btns[1];
+// b2 = btns[2];
+// b3 = btns[3];
+// b4 = btns[4];
+// b5 = btns[5];
+// b6 = btns[6];
+// b7 = btns[7];
+// b8 = btns[8];
 
 // Function to handle player moves
 const ticTacToe = (element, index) => {
@@ -79,4 +88,4 @@ btns.forEach((btn, i) => {
     btn.addEventListener('click', () => ticTacToe(btn, i));
 });
 
-document.querySelector('#reset').addEventListener('click', resetGame);
+.addEventListener('click', resetGame);
