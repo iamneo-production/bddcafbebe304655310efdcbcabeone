@@ -20,7 +20,28 @@ const conditions = [
 initial();
 
 function inital(){
-    btns.forEach(btn => btn.addEventListener)
+    btns.forEach(btn => btn.addEventListener('click', btnClick));
+    btnReset.addEventListener('click',resetGame);
+    result.textContent = `Player ${player} turn`;
+    running = true;
+}
+
+function btnClick(){
+    const index = this.dataset.index;
+    if(cells[index] != "" || !running){
+        return;
+    }
+    updateBtn(this,index);
+    checkWinner();
+}
+
+function updateBtn(btn,index){
+    cells[index] = player;
+    btn.innerHTML = currentPlayer;
+}
+
+function changePlayer(){
+    player = (player == 'X')
 }
 
 result.textContent = `Player ${currentPlayer} turn`;
