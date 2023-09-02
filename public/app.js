@@ -28,7 +28,7 @@ b8 = btns[8];
 // Function to handle player moves
 const ticTacToe = (element, index) => {
     // Your game logic here
-    console.log(b0);
+    
     /*
     **Part 1: Winning Conditions (Add your code here)**
 
@@ -60,7 +60,9 @@ const ticTacToe = (element, index) => {
 const resetGame = () => {
     // Your code to reset the game state
     // ...
-
+    cells = ['', '', '', '', '', '', '', '', ''];
+    currentPlayer = 'X';
+    
     // Your code to update the 'result' element
     // ...
 
