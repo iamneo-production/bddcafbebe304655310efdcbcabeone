@@ -17,7 +17,7 @@ const conditions = [
     [2, 4, 6]
 ];
 
-initial();
+
 
 function initial(){
     btns.forEach(btn => btn.addEventListener('click', btnClick));
@@ -52,7 +52,7 @@ function checkWinner(){
         const condition = conditions[i];
         const btn1 = cells[condition[0]];
         const btn2 = cells[condition[1]];
-        const btn3 = cells[conditions[2]];
+        const btn3 = cells[condition[2]];
         if(btn1 == btn2 && btn2 == btn3){
             isWon = true;
         }
@@ -101,20 +101,15 @@ function checkWinner(){
 
 // Function to reset the game
 const resetGame = () => {
-    // Your code to reset the game state
-    // ...
     cells = ['', '', '', '', '', '', '', '', ''];
     player = 'X';
     currentPlayer = x;
     running = true;
-    // Your code to update the 'result' element
-    // ...
     result.textContent = `Player ${currentPlayer} turn`;
 
-    // Your code to re-enable buttons
-    // ...
     btns.forEach(btn => {
         btn.innerHTML = "";
     })
 };
 
+initial();
