@@ -14,6 +14,7 @@ let conditions = [
     [2, 4, 6]
 ];
 
+result.textContent = `Player ${currentPlayer} turn`;
 var b0,b1,b2,b3,b4,b5,b6,b7,b8;
 b0 = btns[0];
 b1 = btns[1];
