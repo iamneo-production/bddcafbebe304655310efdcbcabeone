@@ -5,7 +5,7 @@ let currentPlayer = x;
 let running = false;
 const result = document.querySelector('.result');
 const btns = document.querySelectorAll('.btn');
-const btnReset = document.querySelector('#reset')
+const btnReset = document.querySelector('#reset');
 const conditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -17,6 +17,7 @@ const conditions = [
     [2, 4, 6]
 ];
 
+initial();
 
 
 function initial(){
@@ -112,4 +113,3 @@ const resetGame = () => {
     })
 };
 
-initial();
