@@ -41,7 +41,25 @@ function updateBtn(btn,index){
 }
 
 function changePlayer(){
-    player = (player == 'X')
+    player = (player == 'X') ? "O" : "X";
+    currentPlayer = (currentPlayer == x) ? o : x;
+    result.textContent = `Player ${player} turn`;
+}
+
+function checkWinner(){
+    let isWon = false;
+    for(let i=0; i<conditions.length; i++){
+        const condition = conditions[i];
+        const btn1 = cells[condition[0]];
+        const btn2 = cells[condition[1]];
+        const btn3 = cells[conditions[2]];
+        if(btn1 == btn2 && btn2 == btn3){
+            isWon = true;
+        }
+    }
+    if(isWon){
+        
+    }
 }
 
 result.textContent = `Player ${currentPlayer} turn`;
