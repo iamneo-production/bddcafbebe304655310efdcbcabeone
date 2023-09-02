@@ -19,7 +19,7 @@ const conditions = [
 
 initial();
 
-function inital(){
+function initial(){
     btns.forEach(btn => btn.addEventListener('click', btnClick));
     btnReset.addEventListener('click',resetGame);
     result.textContent = `Player ${player} turn`;
@@ -67,18 +67,6 @@ function checkWinner(){
         changePlayer();
     }
 }
-
-// result.textContent = `Player ${currentPlayer} turn`;
-// // var b0,b1,b2,b3,b4,b5,b6,b7,b8;
-// // b0 = btns[0];
-// // b1 = btns[1];
-// // b2 = btns[2];
-// // b3 = btns[3];
-// // b4 = btns[4];
-// // b5 = btns[5];
-// // b6 = btns[6];
-// // b7 = btns[7];
-// // b8 = btns[8];
 
 // // Function to handle player moves
 // const ticTacToe = (element, index) => {
@@ -130,8 +118,3 @@ const resetGame = () => {
     })
 };
 
-// btns.forEach((btn, i) => {
-//     btn.addEventListener('click', () => ticTacToe(btn, i));
-// });
-
-// .addEventListener('click', resetGame);
